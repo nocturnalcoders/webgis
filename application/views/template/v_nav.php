@@ -8,10 +8,16 @@
 
 
               <li>
-                  <a href="<?=base_url('home')?>"><i class="fa fa-globe"></i> View Map</a>
+                  <a href="<?= base_url('home') ?>"><i class="fa fa-globe"></i> View Map</a>
               </li>
               <li>
-                  <a href="<?=base_url('home/marker')?>"><i class="fa fa-map-marker"></i> Marker</a>
+                  <a href="<?= base_url('home/marker') ?>"><i class="fa fa-map-marker"></i> Marker</a>
+              </li>
+              <li>
+                  <a href="<?= base_url('home/polyline') ?>"><i class="fa fa-arrows-h"></i> Polyline</a>
+              </li>
+              <li>
+                  <a href="<?= base_url('home/geojson') ?>"><i class="fa fa-map-marker"></i> GeoJSON</a>
               </li>
               <li>
                   <a href="ui.html"><i class="fa fa-desktop"></i> UI Elements</a>

@@ -15,5 +15,7 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 
     <link rel="stylesheet" href="<?=base_url()?>leaflet/leaflet.css" />
+    
     <script src="<?=base_url()?>leaflet/leaflet.js"></script>
+    <script src="<?=base_url()?>leaflet/leaflet.ajax.js"></script>
 </head>

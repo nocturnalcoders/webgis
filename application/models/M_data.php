@@ -12,6 +12,8 @@ class M_data extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('v_hasil');
+        $this->db->where('tahun = 2020');
+        $this->db->order_by("bulan", "asc");
         $query = $this->db->get();
         return $query;
     }

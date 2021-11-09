@@ -1,4 +1,5 @@
 <div id="mapid" style="width:100%; height: 500px;"></div>
+
 <div class="row">
     <div class="col-md-12">
         <div class="panel panel-default">
@@ -7,11 +8,10 @@
                     <table class="table table-striped table-bordered table-hover" id="example">
                         <thead>
                             <tr>
-                                <th>No.</th>
-                                <th>Bulan</th>
-                                <th>Tahun</th>
                                 <th>Nama Kota</th>
                                 <th>Nama Kecamatan</th>
+                                <th>Tahun</th>
+                                <th>Bulan</th>
                                 <th>Impervious</th>
                                 <th>Hijau Sebagian</th>
                                 <th>Hijau</th>
@@ -19,22 +19,21 @@
                         </thead>
                         <tfoot>
                             <tr>
-                                <th>No.</th>
-                                <th>Bulan</th>
-                                <th>Tahun</th>
                                 <th>Nama Kota</th>
                                 <th>Nama Kecamatan</th>
-                                <th>Impervious</th>
-                                <th>Hijau Sebagian</th>
-                                <th>Hijau</th>
+                                <th>Tahun</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
                             </tr>
                         </tfoot>
                         <tbody>
                             <?php
-                            $no = 1;
+                            // $no = 1;
                             foreach ($hasil->result() as $row) { ?>
                                 <tr>
-                                    <td><?php echo $no++ ?></td>
+                                    <!-- <td><?php echo $no++ ?></td> -->
                                     <td><?php echo $row->bulan; ?></td>
                                     <td><?php echo $row->tahun; ?></td>
                                     <td><?php echo $row->nama_kota; ?></td>
@@ -51,11 +50,6 @@
         </div>
     </div>
 </div>
-<style>
-    tfoot {
-        margin-bottom: 100px;
-    }
-</style>
 <script type="text/javascript" src="/WebGis/leaflet/leaflet.ajax.js"></script>
 <script>
     var bdt = new L.LayerGroup();

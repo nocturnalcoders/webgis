@@ -11,10 +11,10 @@
                   <a href="<?= base_url('home') ?>"><i class="fa fa-globe"></i>Beranda</a>
               </li>
               <li>
-                  <a href="<?= base_url('home/marker') ?>"><i class="fa fa-map-marker"></i> Hasil</a>
+                  <a href="<?= base_url('home/hasil') ?>"><i class="fa fa-map-marker"></i> Hasil</a>
               </li>
               <li>
-                  <a href="<?= base_url('home/polyline') ?>"><i class="fa fa-map-marker"></i> Perubahan Lahan</a>
+                  <a href="<?= base_url('home/perubahanLahan') ?>"><i class="fa fa-map-marker"></i> Perubahan Lahan</a>
               </li>
           </ul>
 

@@ -2,30 +2,43 @@
 <div class="row">
     <div class="col-md-12">
         <div class="panel panel-default">
-            <div class="panel-heading">
-                Advanced Tables
-            </div>
             <div class="panel-body">
                 <div class="table-responsive">
-                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                    <table class="table table-striped table-bordered table-hover" id="example">
                         <thead>
                             <tr>
-                                <th>Nama Kota</th>
                                 <th>Nama Kecamatan</th>
-                                <th>Impervious</th>
-                                <th>Hijau Sebagian</th>
-                                <th>Hijau</th>
+                                <th>Nama Kota</th>
+                                <th>Tahun Awal</th>
+                                <th>Tahun Akhir</th>
+                                <th>Tahun Awal Impervious</th>
+                                <th>Tahun Akhir Impervious</th>
+                                <th>Tahun Awal Hijau</th>
+                                <th>Tahun Akhir Hijau</th>
+                                <th>Tahun Awal Hijau Sebagian</th>
+                                <th>Tahun Akhir Hijau Sebagian</th>
+                                <th>Perubahan Impervious</th>
+                                <th>Perubahan Hijau</th>
+                                <th>Perubahan Hijau Sebagian</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
-                            foreach ($hasil->result() as $row) { ?>
+                            foreach ($hasil as $row) { ?>
                                 <tr class="odd gradeX">
-                                    <td><?php echo $row->nama_kota; ?></td>
-                                    <td><?php echo $row->nama_kecamatan; ?></td>
-                                    <td><?php echo $row->impervious; ?></td>
-                                    <td><?php echo $row->hijausebagian; ?></td>
-                                    <td><?php echo $row->hijau; ?></td>
+                                    <td><?php echo $row['nama_kecamatan']; ?></td>
+                                    <td><?php echo $row['nama_kota']; ?></td>
+                                    <td><?php echo $row['tahun_awal']; ?></td>
+                                    <td><?php echo $row['tahun_akhir']; ?></td>
+                                    <td><?php echo $row['tahunawal_impervious']; ?></td>
+                                    <td><?php echo $row['tahunakhir_impervious']; ?></td>
+                                    <td><?php echo $row['tahunawal_hijau']; ?></td>
+                                    <td><?php echo $row['tahunakhir_hijau']; ?></td>
+                                    <td><?php echo $row['tahunawal_hijausebagian']; ?></td>
+                                    <td><?php echo $row['tahunakhir_hijausebagian']; ?></td>
+                                    <td><?php echo $hasil1 = abs($row['tahunawal_impervious'] - $row['tahunakhir_impervious']); ?></td>
+                                    <td><?php echo $hasil2 = abs($row['tahunawal_hijau'] - $row['tahunakhir_hijau']); ?></td>
+                                    <td><?php echo $hasil3 = abs($row['tahunawal_hijausebagian'] - $row['tahunakhir_hijausebagian']); ?></td>
                                 </tr>
                             <?php } ?>
                         </tbody>
@@ -35,9 +48,9 @@
         </div>
     </div>
 </div>
+
 <script type="text/javascript" src="/WebGis/leaflet/leaflet.ajax.js"></script>
 <script>
-    
     var bdt = new L.LayerGroup();
 
     var map = L.map('mapid', {
@@ -80,5 +93,4 @@
             }
         }
     }).addTo(map);
-    
 </script>

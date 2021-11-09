@@ -19,31 +19,23 @@ class Home extends CI_Controller {
         $this->load->view('template/v_wrapper', $data, FALSE);
 	}
 
-    public function marker()
+    public function hasil()
 	{
 		$data = array(
-            'title' => 'Marker Location',
-            'isi' => 'v_marker'
+            'title' => 'Hasil',
+            'isi' => 'v_hasil'
         );
+        $data['hasil'] = $this->m_data->read_hasil();
         $this->load->view('template/v_wrapper', $data, FALSE);
 	}
 
-    public function polyline()
+    public function perubahanLahan()
 	{
 		$data = array(
-            'title' => 'Polyline',
-            'isi' => 'v_polyline'
+            'title' => 'Perubahan Lahan',
+            'isi' => 'v_perubahan'
         );
-        $this->load->view('template/v_wrapper', $data, FALSE);
-	}
-
-    public function geojson()
-	{
-		$data = array(
-            'title' => 'GeoJSON (Polygon)',
-            'isi' => 'v_geojson'
-        );
-        $data['hasil'] = $this->m_data->read();
+        $data['hasil'] = $this->m_data->read1()->result_array();
         $this->load->view('template/v_wrapper', $data, FALSE);
 	}
 }

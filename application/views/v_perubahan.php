@@ -28,15 +28,15 @@
                                 <th>Nama Kota</th>
                                 <th>Tahun Awal</th>
                                 <th>Tahun Akhir</th>
-                                <th>Tahun Awal Impervious</th>
-                                <th>Tahun Akhir Impervious</th>
-                                <th>Tahun Awal Hijau</th>
-                                <th>Tahun Akhir Hijau</th>
-                                <th>Tahun Awal Hijau Sebagian</th>
-                                <th>Tahun Akhir Hijau Sebagian</th>
-                                <th>Perubahan Impervious</th>
-                                <th>Perubahan Hijau</th>
-                                <th>Perubahan Hijau Sebagian</th>
+                                <th style="display:none;"></th>
+                                <th style="display:none;"></th>
+                                <th style="display:none;"></th>
+                                <th style="display:none;"></th>
+                                <th style="display:none;"></th>
+                                <th style="display:none;"></th>
+                                <th style="display:none;"></th>
+                                <th style="display:none;"></th>
+                                <th style="display:none;"></th>
                             </tr>
                         </tfoot>
                         <tbody>

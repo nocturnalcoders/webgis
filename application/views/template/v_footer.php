@@ -91,7 +91,7 @@
 
                 if ($(this).text() !== '') {
                     var isStatusColumn = (($(this).text() == 'Status') ? true : false);
-                    var select = $('<select><option value=""></option></select>')
+                    var select = $('<select style="display: block;margin-top:-1055px"><option value=""></option></select>')
                         .appendTo($(this).empty())
                         .on('change', function() {
                             var val = $(this).val();

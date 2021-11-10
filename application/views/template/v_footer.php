@@ -35,9 +35,6 @@
                     "sInfo": "Showing _START_ to _END_ of _TOTAL_ items."
                 }
             });
-            $('tfoot').each(function() {
-                $(this).insertBefore($(this).siblings('mapid'));
-            });
 
             $("#example tfoot th").each(function(i) {
 

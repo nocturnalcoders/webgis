@@ -34,10 +34,10 @@
                             foreach ($hasil->result() as $row) { ?>
                                 <tr>
                                     <!-- <td><?php echo $no++ ?></td> -->
-                                    <td><?php echo $row->bulan; ?></td>
-                                    <td><?php echo $row->tahun; ?></td>
                                     <td><?php echo $row->nama_kota; ?></td>
                                     <td><?php echo $row->nama_kecamatan; ?></td>
+                                    <td><?php echo $row->tahun; ?></td>
+                                    <td><?php echo $row->bulan; ?></td>
                                     <td><?php echo $row->impervious; ?></td>
                                     <td><?php echo $row->hijausebagian; ?></td>
                                     <td><?php echo $row->hijau; ?></td>
